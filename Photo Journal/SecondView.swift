@@ -25,10 +25,9 @@ struct SecondView: View {
             
         }
         .alert("Do you really want to delete it?", isPresented: $isShowAlert) {
-            Button("Yes") {
+            Button("Yes", role: .destructive) {
             }
-            Button("Nevermind") {
-            }
+            Button("Nevermind", role: .cancel) {}
         }
         
     }

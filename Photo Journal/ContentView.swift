@@ -11,16 +11,19 @@ import SwiftData
 struct ContentView: View {
     @State var inputText = ""
     @State var isShowSecondView = false
+    @State var isShowThirdView = false
 
     var body: some View {
         NavigationStack{
             VStack(spacing: 20) {
                 
                 Spacer()
-                    TextField("Inner Thoughts?", text: $inputText)
-                Spacer()
-                    Button("Keep Journal"){
-                    }
+                    
+                NavigationLink {
+                    FourthView()
+                } label: {
+                    Text("Start Journaling")
+                }
                 Spacer()
                 NavigationLink {
                     SecondView()
@@ -29,9 +32,9 @@ struct ContentView: View {
                 }
                 Spacer()
                 Button("What is this app?"){
-                    isShowSecondView = true
+                    isShowThirdView = true
                 }
-                .sheet(isPresented: $isShowSecondView){
+                .sheet(isPresented: $isShowThirdView){
                     ThirdView()
                 }
                 Spacer()
