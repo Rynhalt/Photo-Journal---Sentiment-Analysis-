@@ -15,6 +15,8 @@
 		2DCD09622AE36C090040BD36 /* Photo_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD09612AE36C090040BD36 /* Photo_JournalTests.swift */; };
 		2DCD096C2AE36C090040BD36 /* Photo_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD096B2AE36C090040BD36 /* Photo_JournalUITests.swift */; };
 		2DCD096E2AE36C090040BD36 /* Photo_JournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD096D2AE36C090040BD36 /* Photo_JournalUITestsLaunchTests.swift */; };
+		2DE48B722AE48CCE009D4549 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B712AE48CCE009D4549 /* SecondView.swift */; };
+		2DE48B742AE48F86009D4549 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B732AE48F86009D4549 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2DCD09672AE36C090040BD36 /* Photo JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photo JournalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCD096B2AE36C090040BD36 /* Photo_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_JournalUITests.swift; sourceTree = "<group>"; };
 		2DCD096D2AE36C090040BD36 /* Photo_JournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_JournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2DE48B712AE48CCE009D4549 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		2DE48B732AE48F86009D4549 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 			children = (
 				2DCD094C2AE36C070040BD36 /* Photo_JournalApp.swift */,
 				2DCD094E2AE36C070040BD36 /* ContentView.swift */,
+				2DE48B732AE48F86009D4549 /* ThirdView.swift */,
+				2DE48B712AE48CCE009D4549 /* SecondView.swift */,
 				2DCD09502AE36C070040BD36 /* Item.swift */,
 				2DCD09522AE36C090040BD36 /* Assets.xcassets */,
 				2DCD09542AE36C090040BD36 /* Photo_Journal.entitlements */,
@@ -265,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DCD094F2AE36C070040BD36 /* ContentView.swift in Sources */,
+				2DE48B742AE48F86009D4549 /* ThirdView.swift in Sources */,
 				2DCD09512AE36C070040BD36 /* Item.swift in Sources */,
+				2DE48B722AE48CCE009D4549 /* SecondView.swift in Sources */,
 				2DCD094D2AE36C070040BD36 /* Photo_JournalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

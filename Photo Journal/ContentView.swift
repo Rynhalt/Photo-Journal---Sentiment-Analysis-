@@ -9,13 +9,37 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @State var inputText = ""
+    @State var isShowSecondView = false
 
     var body: some View {
-        VStack {
-            Text("Hi!")
-            Button("Add Journal") {
-                print("added succesfully")
+        NavigationStack{
+            VStack(spacing: 20) {
+                
+                Spacer()
+                    TextField("Inner Thoughts?", text: $inputText)
+                Spacer()
+                    Button("Keep Journal"){
+                    }
+                Spacer()
+                NavigationLink {
+                    SecondView()
+                } label: {
+                    Text("Look at Past Journals")
+                }
+                Spacer()
+                Button("What is this app?"){
+                    isShowSecondView = true
+                }
+                .sheet(isPresented: $isShowSecondView){
+                    ThirdView()
+                }
+                Spacer()
+
+                   
             }
+            .padding()
+            .navigationTitle("Home")
         }
     }
 }
