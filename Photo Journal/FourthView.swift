@@ -9,17 +9,34 @@ import SwiftUI
 
 struct FourthView: View {
     @State var inputText = ""
+    @State var isShowDialogue = false
     var body: some View {
-    Spacer()
-        TextField("Inner Thoughts?", text: $inputText)
+        VStack{
+            Spacer()
+            TextField("Inner Thoughts?", text: $inputText)
+                .padding()
+            Spacer()
+            Button("Keep this journal"){
+                
+            }
             .padding()
-    Spacer()
-        Button("Keep this journal"){
-            
+            Spacer()
+            Button("Add a Photo"){
+                isShowDialogue = true
+            }
+            .padding()
+            Spacer()
         }
-        .padding()
-    Spacer()
+        .confirmationDialog("Add Photo", isPresented: $isShowDialogue) {
+            Button("Take a Photo"){
+                
+            }
+            Button("Choose Photo from Library"){
+                
+            }
+        }
     }
+    
 }
 
 #Preview {

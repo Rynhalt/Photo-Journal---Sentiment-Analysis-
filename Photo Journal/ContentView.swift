@@ -10,8 +10,8 @@ import SwiftData
 
 struct ContentView: View {
     @State var inputText = ""
-    @State var isShowSecondView = false
-    @State var isShowThirdView = false
+    @State var isShowArchiveView = false
+    @State var isShowGuideView = false
 
     var body: some View {
         NavigationStack{
@@ -26,16 +26,16 @@ struct ContentView: View {
                 }
                 Spacer()
                 NavigationLink {
-                    SecondView()
+                    ArchiveView()
                 } label: {
                     Text("Look at Past Journals")
                 }
                 Spacer()
                 Button("What is this app?"){
-                    isShowThirdView = true
+                    isShowGuideView = true
                 }
-                .sheet(isPresented: $isShowThirdView){
-                    ThirdView()
+                .sheet(isPresented: $isShowGuideView){
+                    GuideView()
                 }
                 Spacer()
 

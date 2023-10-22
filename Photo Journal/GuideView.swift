@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ThirdView: View {
+struct GuideView: View {
     var body: some View {
         ZStack{
             Color.black
@@ -21,5 +21,5 @@ struct ThirdView: View {
 }
 
 #Preview {
-    ThirdView()
+    GuideView()
 }
