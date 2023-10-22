@@ -23,7 +23,7 @@ struct ContentView: View {
                 
                 Spacer()
                     
-                NavigationLink(destination: NewJournalView()) {
+                NavigationLink(destination: NewJournalView(vm: MemoModel())) {
                     Text("Start Journaling")
                 }.onTapGesture {
                     vm.memos.insert(newMemo, at: 0)
@@ -43,6 +43,24 @@ struct ContentView: View {
                     GuideView()
                 }
                 Spacer()
+                
+                NavigationLink(destination: NewJournalView(vm: MemoModel()), isActive: $isActive) {
+                                    EmptyView()
+                                }
+
+                // 新規メモ生成ボタン
+                                Button(action: {
+
+                                    isActive.toggle()    // ✅
+
+                                }) {
+                                    Image(systemName: "square.and.pencil")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 25, height: 25)
+                                        .padding(.top)
+                                }
+                
                 
 
                    

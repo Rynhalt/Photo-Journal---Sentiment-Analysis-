@@ -13,6 +13,8 @@ struct NewJournalView: View {
     @State var isShowDialogue = false
     @State var newJournalTitle = ""
     @State var newJournalText = ""
+    @StateObject var vm: MemoModel
+    @Environment(\.presentationMode) private var presentationMode
     enum Field: Hashable { case title }
     
     @FocusState private var foucsedField: Field?
@@ -41,7 +43,13 @@ struct NewJournalView: View {
             .padding()
             Spacer()
         }
-    
+        .navigationBarTitle(Text(""), displayMode: .inline)
+        .navigationBarItems(trailing: Button("完了"){
+            vm.memos[0]["memoTitle"] = newJournalTitle  
+            vm.memos[0]["memoText"] = newJournalText
+            self.presentationMode.wrappedValue.dismiss()
+        }.padding())
+                            
         .confirmationDialog("Add Photo", isPresented: $isShowDialogue) {
             Button("Take a Photo"){
                 
@@ -57,9 +65,10 @@ struct NewJournalView: View {
                                 }
                             }
     }
+                            
     
 }
 
 #Preview {
-    NewJournalView()
+    NewJournalView(vm: MemoModel())
 }
