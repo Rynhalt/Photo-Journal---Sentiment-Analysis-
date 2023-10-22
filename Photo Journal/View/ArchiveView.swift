@@ -27,13 +27,11 @@ struct ArchiveView: View {
                 .ignoresSafeArea()
             VStack{
                 Spacer()
-                Text("Your journey so far...")
-                Spacer()
                 NavigationView {
                     List {
-                        ForEach(memos, id:\.self) { memo in
-                            NavigationLink(destination: MemoDetailView(memo: memo)) { 
-                                MemoRowView(memo: memo)
+                        ForEach(0 ..< memos.count, id:\.self) { index in
+                            NavigationLink(destination: MemoDetailView(memo: memos[index])) {
+                                MemoRowView(memo: memos[index])
                             }
                             
                         }
@@ -42,7 +40,7 @@ struct ArchiveView: View {
                     }
                     
                     .navigationBarItems(trailing: EditButton())
-                    .navigationTitle("Journals")
+                    .navigationTitle("Your journey so far...")
                 }
                 Button("Delete notes") {
                     isShowAlert = true
