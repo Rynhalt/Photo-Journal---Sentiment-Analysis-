@@ -7,20 +7,17 @@
 
 import SwiftUI
 
+
+
 struct ArchiveView: View {
     @State var isShowAlert = false
+    @StateObject var vm: MemoModel
     func delete (offsets: IndexSet) {
-        memos.remove(atOffsets: offsets)
+        vm.memos.remove(atOffsets: offsets)
     }
     func move(offsets: IndexSet, index: Int) {
-            memos.move(fromOffsets: offsets, toOffset: index)
+        vm.memos.move(fromOffsets: offsets, toOffset: index)
         }
-    @State private var memos = [
-                                ["title1", "10:01","This is a sample"],
-                                ["title2", "10:01","This is a sample"],
-                                ["title3", "10:01","This is a sample"],
-                                ["title4", "10:01","This is a sample"],
-                                ["title5", "10:01","This is a sample"],]
     var body: some View {
         ZStack{
             Color.white
@@ -28,15 +25,19 @@ struct ArchiveView: View {
             VStack{
                 Spacer()
                 NavigationView {
-                    List {
-                        ForEach(0 ..< memos.count, id:\.self) { index in
-                            NavigationLink(destination: MemoDetailView(memo: memos[index])) {
-                                MemoRowView(memo: memos[index])
+                    VStack{
+                        
+                        List {
+                            ForEach(0 ..< vm.memos.count, id:\.self) { index in
+                                
+                                NavigationLink(destination: MemoDetailView(memo: vm.memos[index])) {
+                                    MemoRowView(memo: vm.memos[index])
+                                }
+                                
                             }
-                            
+                            .onDelete(perform: delete)
+                            .onMove(perform: move)
                         }
-                        .onDelete(perform: delete)
-                        .onMove(perform: move)
                     }
                     
                     .navigationBarItems(trailing: EditButton())
@@ -62,14 +63,14 @@ struct ArchiveView: View {
 }
 struct MemoRowView: View {
     
-    var memo: [String]
+    var memo: [String: String]
     
     var body: some View {
         
         HStack {
-            Text(memo[0])
+            Text(memo["memoTitle"] ?? "")
             Spacer()
-            Text(memo[1])
+            Text(memo["memoTime"] ?? "")
         }
         .padding(.horizontal, 20.0)
     }
@@ -77,7 +78,7 @@ struct MemoRowView: View {
 
 #Preview {
 
-    ArchiveView()
+    ArchiveView(vm: MemoModel())
 }
 
 

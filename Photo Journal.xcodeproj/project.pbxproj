@@ -19,7 +19,7 @@
 		2DE48B742AE48F86009D4549 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B732AE48F86009D4549 /* GuideView.swift */; };
 		2DE48B762AE496C7009D4549 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B752AE496C7009D4549 /* FourthView.swift */; };
 		2DE48B782AE4BA70009D4549 /* MemoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B772AE4BA70009D4549 /* MemoDetailView.swift */; };
-		2DE48B7E2AE4BE1E009D4549 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B7D2AE4BE1E009D4549 /* MemoData.swift */; };
+		2DE48B7E2AE4BE1E009D4549 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE48B7D2AE4BE1E009D4549 /* MemoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		2DE48B732AE48F86009D4549 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		2DE48B752AE496C7009D4549 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		2DE48B772AE4BA70009D4549 /* MemoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailView.swift; sourceTree = "<group>"; };
-		2DE48B7D2AE4BE1E009D4549 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		2DE48B7D2AE4BE1E009D4549 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 		2DE48B792AE4BDDF009D4549 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2DE48B7D2AE4BE1E009D4549 /* MemoData.swift */,
+				2DE48B7D2AE4BE1E009D4549 /* MemoModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			files = (
 				2DE48B782AE4BA70009D4549 /* MemoDetailView.swift in Sources */,
 				2DCD094F2AE36C070040BD36 /* ContentView.swift in Sources */,
-				2DE48B7E2AE4BE1E009D4549 /* MemoData.swift in Sources */,
+				2DE48B7E2AE4BE1E009D4549 /* MemoModel.swift in Sources */,
 				2DE48B742AE48F86009D4549 /* GuideView.swift in Sources */,
 				2DCD09512AE36C070040BD36 /* Item.swift in Sources */,
 				2DE48B722AE48CCE009D4549 /* ArchiveView.swift in Sources */,

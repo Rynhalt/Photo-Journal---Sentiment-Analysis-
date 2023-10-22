@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 NavigationLink {
-                    ArchiveView()
+                    ArchiveView(vm: MemoModel())
                 } label: {
                     Text("Look at Past Journals")
                 }

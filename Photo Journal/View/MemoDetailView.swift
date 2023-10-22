@@ -9,20 +9,20 @@ import SwiftUI
 
 struct MemoDetailView: View {
 
-    var memo: [String]
+    var memo: [String:String]
 
     var body: some View {
 
         VStack(alignment: .leading) {
             HStack {
-                Text(memo[0])
+                Text(memo["memoTitle"] ?? "")
                     .font(.largeTitle)
                     .fontWeight(.thin)
                 Spacer()
-                Text(memo[1])
+                Text(memo["memoTme"] ?? "")
             }
             .padding(.bottom, 20)
-            Text(memo[2])
+            Text(memo["memoText"] ?? "")
 
             Spacer()
         }
@@ -34,5 +34,5 @@ struct MemoDetailView: View {
 }
 
 #Preview {
-    MemoDetailView(memo: ["I want to be strong like Roman empire"])
+    MemoDetailView(memo: ["memoTitle": "プログラミングで起きたエラー", "memoTime": "10:01", "memoText":"にんじんの美味しい料理の仕方を調べる。"])
 }
