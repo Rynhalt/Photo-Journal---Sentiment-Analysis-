@@ -12,6 +12,10 @@ struct ContentView: View {
     @State var inputText = ""
     @State var isShowArchiveView = false
     @State var isShowGuideView = false
+    @State private var isActive = false
+    var newMemo = ["memoTitle": "", "memoTime": "", "memoText": ""]
+    @StateObject var vm: MemoModel
+
 
     var body: some View {
         NavigationStack{
@@ -19,11 +23,12 @@ struct ContentView: View {
                 
                 Spacer()
                     
-                NavigationLink {
-                    FourthView()
-                } label: {
+                NavigationLink(destination: NewJournalView()) {
                     Text("Start Journaling")
+                }.onTapGesture {
+                    vm.memos.insert(newMemo, at: 0)
                 }
+                         
                 Spacer()
                 NavigationLink {
                     ArchiveView(vm: MemoModel())
@@ -38,16 +43,21 @@ struct ContentView: View {
                     GuideView()
                 }
                 Spacer()
+                
 
                    
             }
+            
+            
             .padding()
             .navigationTitle("Home")
         }
+        
+                    }
     }
-}
+
 
 #Preview {
-    ContentView()
+    ContentView(vm: MemoModel())
         .modelContainer(for: Item.self, inMemory: true)
 }

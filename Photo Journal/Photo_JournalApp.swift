@@ -12,7 +12,7 @@ import SwiftData
 struct Photo_JournalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(vm: MemoModel())
         }
     }
 }
