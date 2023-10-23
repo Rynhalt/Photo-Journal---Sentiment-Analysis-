@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreML
 
+//let model = SentimentAnalyzer()
+
 struct NoteDetailView: View {
     @EnvironmentObject var imageData : ImageData
     @State var note: ImageNote
