@@ -11,11 +11,12 @@ import SwiftUI
 struct ContentView: View {
     
     @State var showImagePicker: Bool = false
+    @StateObject var imageData = ImageData()
     
     var body: some View {
         NavigationView {
             VStack{
-                if true {
+                if imageData.imageNote.isEmpty {
                     Text("Add a note")
                         .italic()
                         .foregroundColor(.gray)
@@ -28,7 +29,7 @@ struct ContentView: View {
                 ImagePicker(sourceType: .photoLibrary) {
                     image in
                     // Add notes and images to array
-                    print("\(image.scale)")
+                    imageData.addNote(image: image, title: "Reflect!", desc: "")
                 }
             }
             .toolbar {
@@ -43,7 +44,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         withAnimation {
-                            //Reset user data: journals
+                            imageData.resetUserData()
                         }
                     } label: {
                         Label("Trash", systemImage: "trash")
@@ -52,6 +53,7 @@ struct ContentView: View {
                 }
             }
         }
+        .environmentObject(imageData)
     }
 }
 
