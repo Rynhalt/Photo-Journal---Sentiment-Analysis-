@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreML
 
 struct NoteDetailView: View {
     @EnvironmentObject var imageData : ImageData
@@ -54,6 +55,24 @@ struct NoteDetailView: View {
             }
         }
     }
+    
+//    private func analyzeButtonTapper() {
+//        let model = try!SentimentAnalyzer()
+//        let input = SentimentAnalyzer(text:input)
+//        
+//        guard let output = try? model.prediction(input: input)
+//        else {
+//            return
+//        }
+//        
+//        if output.label == "negative"{
+//            labelPrediction() = ""
+//        } else if output.label == "positive"{
+//            labelPrediction() = ""
+//        } else if output.label == "neutral"{
+//            labelPrediction() = ""
+//        }
+//    }
 }
 
 struct NoteDetailView_Previews: PreviewProvider {

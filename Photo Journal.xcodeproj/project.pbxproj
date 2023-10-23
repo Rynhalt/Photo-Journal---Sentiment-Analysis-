@@ -11,6 +11,7 @@
 		2DB67F152AE60B5100FAC370 /* ImageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB67F142AE60B5100FAC370 /* ImageDataModel.swift */; };
 		2DB67F172AE60B8500FAC370 /* NotesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB67F162AE60B8500FAC370 /* NotesDetailView.swift */; };
 		2DB67F192AE60B8D00FAC370 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB67F182AE60B8D00FAC370 /* HomeView.swift */; };
+		2DB67F202AE62B1200FAC370 /* SentimentAnalyzer in Resources */ = {isa = PBXBuildFile; fileRef = 2DB67F1F2AE62B1200FAC370 /* SentimentAnalyzer */; };
 		2DCD094D2AE36C070040BD36 /* Photo_JournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD094C2AE36C070040BD36 /* Photo_JournalApp.swift */; };
 		2DCD09512AE36C070040BD36 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD09502AE36C070040BD36 /* Item.swift */; };
 		2DCD09532AE36C090040BD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DCD09522AE36C090040BD36 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		2DB67F142AE60B5100FAC370 /* ImageDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataModel.swift; sourceTree = "<group>"; };
 		2DB67F162AE60B8500FAC370 /* NotesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDetailView.swift; sourceTree = "<group>"; };
 		2DB67F182AE60B8D00FAC370 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2DB67F1F2AE62B1200FAC370 /* SentimentAnalyzer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SentimentAnalyzer; sourceTree = "<group>"; };
 		2DCD09492AE36C070040BD36 /* Photo Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCD094C2AE36C070040BD36 /* Photo_JournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_JournalApp.swift; sourceTree = "<group>"; };
 		2DCD09502AE36C070040BD36 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		2DCD094B2AE36C070040BD36 /* Photo Journal */ = {
 			isa = PBXGroup;
 			children = (
+				2DB67F1F2AE62B1200FAC370 /* SentimentAnalyzer */,
 				2DCD094C2AE36C070040BD36 /* Photo_JournalApp.swift */,
 				2DB67F132AE60B3C00FAC370 /* ImageData */,
 				2DB67F102AE60AB800FAC370 /* ImagePickerFeature */,
@@ -276,6 +279,7 @@
 			files = (
 				2DCD09572AE36C090040BD36 /* Preview Assets.xcassets in Resources */,
 				2DCD09532AE36C090040BD36 /* Assets.xcassets in Resources */,
+				2DB67F202AE62B1200FAC370 /* SentimentAnalyzer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
