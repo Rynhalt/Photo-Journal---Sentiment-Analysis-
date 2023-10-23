@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct Photo_JournalApp: App {
+    @StateObject var memoModel = MemoModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(vm: MemoModel())
+            ArchiveView()
         }
     }
 }

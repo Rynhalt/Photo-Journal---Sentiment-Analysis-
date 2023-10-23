@@ -1,15 +1,17 @@
 //
-//  MemoDetailView.swift
+//  MemoDetailk.swift
 //  Photo Journal
 //
-//  Created by Marcus Chang on 2023/10/21.
+//  Created by Marcus Chang on 2023/10/22.
 //
 
 import SwiftUI
 
 struct MemoDetailView: View {
 
+    // 引数としてMemoLisetViewから要素を受け取る
     var memo: [String:String]
+    @StateObject var vm: MemoModel
 
     var body: some View {
 
@@ -19,20 +21,16 @@ struct MemoDetailView: View {
                     .font(.largeTitle)
                     .fontWeight(.thin)
                 Spacer()
-                Text(memo["memoTme"] ?? "")
+                Text(memo["memoTime"] ?? "")
             }
             .padding(.bottom, 20)
             Text(memo["memoText"] ?? "")
-
+            
             Spacer()
         }
         .padding(.all, 20)
-        .navigationBarTitle(Text("Details"),
+        .navigationBarTitle(Text("詳細"),
                             displayMode: .inline)
 
     }
-}
-
-#Preview {
-    MemoDetailView(memo: ["memoTitle": "プログラミングで起きたエラー", "memoTime": "10:01", "memoText":"にんじんの美味しい料理の仕方を調べる。"])
 }
