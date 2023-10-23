@@ -38,6 +38,7 @@ struct ImageNote : Codable, Hashable, Identifiable {
     
     func addNote(image: UIImage, title: String, desc: String) {
         if let pngRepresentation = image.pngData() {
+            
             let tempNote = ImageNote(image: pngRepresentation, title: title, description: desc)
             imageNote.insert(tempNote, at:0)
             print("Note added!")
@@ -61,6 +62,7 @@ struct ImageNote : Codable, Hashable, Identifiable {
     }
     
     func resetUserData() {
+        
         UserDefaults.standard.removeObject(forKey: IMAGES_KEY)
         UserDefaults.resetStandardUserDefaults()
         
