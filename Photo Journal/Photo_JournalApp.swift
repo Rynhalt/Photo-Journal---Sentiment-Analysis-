@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 import CoreML
 
+
+
 @main
 struct Photo_JournalApp: App {
     

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-import SwiftUI
+import CoreML
 
 struct HomeView: View {
     @EnvironmentObject var imageData : ImageData
